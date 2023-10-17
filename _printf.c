@@ -7,7 +7,7 @@
   * @format: identifier.
  * Return: the length of the string.
  */
-int _printf(const char * const format, ...)
+int _print(const char * const format, ...)
 {
 	convert_match m[] = {
 		{"%s", printf_st}, {"%c", printf_ch},

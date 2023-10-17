@@ -3,7 +3,7 @@
 /**
  * printf_bin - prints a binary number.
  * @val: arguments.
- * Return: 1.
+ * Return: cont.
  */
 int printf_bin(va_list val)
 {
@@ -30,4 +30,3 @@ int printf_bin(va_list val)
 		cont++;
 		_putchar('0');
 	}
-	return (cont);
