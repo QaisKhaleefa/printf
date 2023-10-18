@@ -1,33 +1,37 @@
 #include "main.h"
-
 /**
- * parse_R13 - substitute %R by argument number in rot13
- * @buff_dest: string to change
- * @arg: va_list char to change
- * @buff_count: index of dst where the R of %R is
- * Return: New index
+ * printf_rot13 - printf str to ROT13 place into buffer
+ * @args: type struct va_arg where is allocated printf arguments
+ * Return: counter
+ *
  */
-int parse_R13(char *buff_dest, va_list arg, int buff_count)
+int printf_rot13(va_list args)
 {
-	char *str;
-	char *keys = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char *keynew = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
-	int i, j = 0;
+	int i, j, counter = 0;
+	int k = 0;
+	char *s = va_arg(args, char*);
+	char alpha[] = {"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"};
+	char beta[] = {"nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"};
 
-	str = va_arg(arg, char *);
-	while (str[j])
+	if (s == NULL)
+		s = "(null)";
+	for (i = 0; s[i]; i++)
 	{
-		for (i = 0; keys[i]; i++)
+		k = 0;
+		for (j = 0; alpha[j] && !k; j++)
 		{
-			if (str[j] == keys[i])
+			if (s[i] == alpha[j])
 			{
-				buff_dest[buff_count] = keynew[i];
-				break;
+				_putchar(beta[j]);
+				counter++;
+				k = 1;
 			}
-			buff_dest[buff_count] = str[j];
 		}
-		j++, buff_count++;
+		if (!k)
+		{
+			_putchar(s[i]);
+			counter++;
+		}
 	}
-
-	return (buff_count);
+	return (counter);
 }
