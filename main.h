@@ -39,11 +39,11 @@ int _strlen(char *ch);
 int *_strcpy(char *dest, char *src);
 int _strlenc(const char *ch);
 int rev_string(char *ch);
+int _printf(const char *format, ...);
 int _strlenc(const char *ch);
 int printf_perc(void);
 int printf_ch(va_list val);
 int printf_st(va_list val);
 int _putchar(char ch);
-int _printf(const char *format, ...);
 
 #endif
