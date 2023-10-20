@@ -28,11 +28,11 @@ int printf_type(const char *format, va_list args, int print)
 			print++;
 			break;
 		case 'b':
-			print = printf_binary(va_arg(args, unsigned int), print);
+			print = printf_bin(va_arg(args, unsigned int), print);
 			break;
 		case 'x':
 		case 'X':
-			print = _x(va_arg(args, unsigned int), print, (*format == 'X') ? 1 : 0);
+			print = printf_hex(va_arg(args, unsigned int), print, (*format == 'X') ? 1 : 0);
 			break;
 		case 'o':
 			print = printf_octal(va_arg(args, unsigned int), print);
