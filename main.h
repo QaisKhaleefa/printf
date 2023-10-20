@@ -1,6 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#define MAX_HEX_DIGITS 16
+
 #include <stdio.h>
 #include <stdarg.h>
 #include <limits.h>
