@@ -15,7 +15,7 @@ int printf_reverse(va_list args, int print);
 int printf_type(const char *format, va_list args, int print);
 int printf_octal(unsigned int num, int print);
 int printf_bin(unsigned int num, int print);
-int _x(unsigned int num, int printed, int uppercase);
+int printf_hex(unsigned int num, int print, int uppercase);
 int printf_unsigned(unsigned int num, int print);
 int printf_pointer(va_list args, int print);
 
