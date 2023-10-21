@@ -32,13 +32,13 @@ int printf_type(const char *format, va_list args, int print)
 			break;
 		case 'x':
 		case 'X':
-			print = printf_hex(va_arg(args, unsigned int), print, (*format == 'X') ? 1 : 0);
+			print = printf_hex(va_arg(args, unsigned int), print, *format);
 			break;
 		case 'o':
 			print = printf_octal(va_arg(args, unsigned int), print);
 			break;
 		case 'u':
-			print = printf_unsigned(va_arg(args, unsigned int), print);
+			print = printf_unsigned(va_arg(args, int), print);
 			break;
 		case 'r':
 			print = printf_reverse(args, print);
