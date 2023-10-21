@@ -2,8 +2,8 @@
 
 /**
  * _printf - they are factor in the printing
- * @format: the format specifier
- * Return: the formated string
+ * @format: the specific format
+ * Return: the  string
  */
 
 int _printf(const char *format, ...)
