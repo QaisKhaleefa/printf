@@ -1,12 +1,13 @@
 #include "main.h"
 
 /**
- * printf_type - selects the exactly type to print.
+ * printf_type - selects the appropriate specifiers
  * @args: number of arguements
  * @print: the print characters
  * @format: the format specifier
- * Return: print case.
+ * Return: print charcaters
  */
+
 
 int printf_type(const char *format, va_list args, int print)
 {
