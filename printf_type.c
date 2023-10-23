@@ -1,3 +1,6 @@
+#include "main.h"
+
+
 /**
  * printf_type - select the exatcly type
  * @args: number of arguements

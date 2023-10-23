@@ -7,7 +7,7 @@
 #include <limits.h>
 
 int _printf(const char *format, ...);
-int printf_string(va_list args, int pr);
+int printf_str(va_list args, int pr);
 int _putchar(char ch);
 int printf_char(va_list args, int pr);
 int printf_integer(va_list args, int pr);
