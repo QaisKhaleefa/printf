@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * _printf - they are factor in the printing
- * @format: the specific format
- * Return: the  string
+ * _printf - provide the print requrment
+ * @format: specify format
+ * Return: the formated string
  */
 
 int _printf(const char *format, ...)
 {
-	int print = 0;
+	int pr = 0;
 
 	va_list args;
 
@@ -19,16 +19,16 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			print = printf_type(format, args, print);
+			pr = printf_type(format, args, pr);
 			format++;
 		}
 		else
 		{
 			_putchar(*format);
-			print++;
+			pr++;
 			format++;
 		}
 	}
 	va_end(args);
-	return (print);
+	return (pr);
 }
